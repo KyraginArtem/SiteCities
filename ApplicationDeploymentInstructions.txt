@@ -1,0 +1,41 @@
+Инструкция по развертыванию приложения
+
+1. Установка окружения
+Для развертывания Laravel проекта на вашем локальном компьютере или сервере, вам необходимо следующее:
+
+1.1 Скачайте и установите XAMPP
+1.2 Откройте XAMPP Control Panel
+1.3 Запустите Apache и MySQL, нажав кнопки Start рядом с ними
+1.4 Скачайте и установите Composer
+
+1.5 Проверьте установку Composer
+composer -v
+
+1.6 Перейти в дирректорию XAMPP
+cd C:\xampp\htdocs
+
+1.7 Клонируйте проект с GitHub
+git clone https://github.com/KyraginArtem/SiteCities.git
+
+
+2 Установка зависимостей
+-Зайдите в командной строке в папку с пректом и запустите:
+composer install
+
+2. Установка зависимостей:
+composer install
+
+3. Создайте БД в MS SQL:
+CREATE DATABASE multiregionProject;
+
+4. Создайте таблицы в базе данных: Выполните команду в папке проекта:
+php artisan migrate
+
+5. Загрузите данные о городах, выполните команду:
+php artisan parse:cities
+
+6. Запустите локальный сервер Laravel:
+php artisan serve
+
+7. В браузере в адресной строке введите:
+http://localhost:8000/
